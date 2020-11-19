@@ -35,14 +35,6 @@ header {
 }
 
 /* slider */
-.slider {
-    max-width: 100%;
-    position: relative;
-    height: 250px;
-    margin-bottom: 130px;
-    margin: auto;
-}
-
 .slidermobile {
     display: none;
 }
@@ -51,13 +43,23 @@ header {
     display: none;
 }
 
+.slider {
+    max-width: 90%;
+    position: relative;
+    margin: auto;
+    height: 300px;
+    margin-bottom: 15px;
+
+}
+
 .slider .item img {
     object-fit: cover;
     width: 100%;
     height: 300px;
+    border: none !important;
+    box-shadow: none !important;
 }
 
-/* Кнопки вперед и назад */
 .slider .prev, .slider .next {
     cursor: pointer;
     position: absolute;
@@ -78,7 +80,6 @@ header {
     border-radius: 3px 0 0 3px;
 }
 
-
 .slider .prev:hover,
 .slider .next:hover {
     background-color: rgba(0, 0, 0, 0.8);
@@ -86,7 +87,6 @@ header {
 
 .slider-dots {
     text-align: center;
-
 }
 
 .slider-dots_item {
@@ -104,8 +104,6 @@ header {
 .slider-dots_item:hover {
     background-color: #aaa;
 }
-
-/* Анимация слайдов */
 
 .slider .item {
     -webkit-animation-name: fade;
@@ -149,7 +147,7 @@ header {
 .main {
     display: block;
     color: #333333;
-    margin-top: 100px;
+    margin-top: 25px;
 }
 
 .main_text h1 {
@@ -450,23 +448,23 @@ header {
         height: 50px;
     }
 
-    .slidermobile {
+.slidermobile {
     display: block;
     max-width: 100%;
     position: relative;
-    height: 100px;
-    margin-bottom: 50px;
     margin: auto;
-    }
+    height: 250px;
+}
 
-
-    .slidermobile .mobileitem img {
+.slidermobile .mobileitem img {
     object-fit: cover;
     width: 100%;
-    height: 150px;
-    }
+    height: 200px;
+    border: none !important;
+    box-shadow: none !important;
+}
 
-    .slidermobile .prev, .slidermobile .next {
+.slidermobile .prev, .slidermobile .next {
     cursor: pointer;
     position: absolute;
     top: 0;
@@ -479,25 +477,23 @@ header {
     font-size: 18px;
     transition: 0.6s ease;
     border-radius: 0 3px 3px 0;
-    }
+}
 
-    .slidermobile .next {
+.slidermobile .next {
     right: 0;
     border-radius: 3px 0 0 3px;
-    }
+}
 
-
-    .slidermobile .prev:hover,
-    .slidermobile .next:hover {
+.slidermobile .prev:hover,
+.slidermobile .next:hover {
     background-color: rgba(0, 0, 0, 0.8);
-    }
+}
 
-    .slider-dots-mobile {
+.slider-dots-mobile {
     text-align: center;
-    display: block;
-    }
+}
 
-    .slider-dots-mobile_item {
+.slider-dots-mobile_item {
     cursor: pointer;
     height: 12px;
     width: 12px;
@@ -506,37 +502,37 @@ header {
     border-radius: 50%;
     display: inline-block;
     transition: background-color 0.6s ease;
-    }
+}
 
-    .active,
-    .slider-dots-mobile_item:hover {
+.activemobile,
+.slider-dots-mobile_item:hover {
     background-color: #aaa;
-    }
+}
 
-    .slidermobile .mobileitem {
+.slidermobile .mobileitem {
     -webkit-animation-name: fade;
     -webkit-animation-duration: 1.5s;
     animation-name: fade;
     animation-duration: 1.5s;
-    }
+}
 
-    @-webkit-keyframes fade {
+@-webkit-keyframes fade {
     from {
         opacity: .4
     }
     to {
         opacity: 1
     }
-    }
+}
 
-    @keyframes fade {
+@keyframes fade {
     from {
         opacity: .4
     }
     to {
         opacity: 1
     }
-    }
+}
 
     .slider {
         display: none;
@@ -554,6 +550,7 @@ header {
     .slider .prev, .slider .next {
         display: none;
     }
+    
 
     .navigation a {
         margin: 10px 10px;
@@ -605,7 +602,7 @@ header {
     }
 
     .example img {
-        margin-top: 100px;
+        margin-top: 50px;
     }
 
     .learn3img,

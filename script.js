@@ -32,37 +32,38 @@ function showSlides(n) {
     dots[slideIndex - 1].className += " active";
 }
 
-var slideIndex = 1;
-showSlides(slideIndex);
+var slideIndexMobile = 1;
+showSlidesMobile(slideIndexMobile);
 
-function plusSlide() {
-    showSlides(slideIndex += 1);
+function plusSlideMobile() {
+    showSlidesMobile(slideIndexMobile += 1);
 }
-function minusSlide() {
-    showSlides(slideIndex -= 1);
+function minusSlideMobile() {
+    showSlidesMobile(slideIndexMobile -= 1);
 }
-function currentSlide(n) {
-    showSlides(slideIndex = n);
+function currentSlideMobile(n) {
+    showSlidesMobile(slideIndexMobile = n);
 }
-function showSlides(n) {
+function showSlidesMobile(n) {
     let i;
-    let slides = document.getElementsByClassName("mobileitem");
-    let dots = document.getElementsByClassName("slider-dots-mobile_item");
-    if (n > slides.length) {
-        slideIndex = 1
+    let slidesMobile = document.getElementsByClassName("mobileitem");
+    let dotsMobile = document.getElementsByClassName("slider-dots-mobile_item");
+    if (n > slidesMobile.length) {
+        slideIndexMobile = 1
     }
     if (n < 1) {
-        slideIndex = slides.length
+        slideIndexMobile = slidesMobile.length
     }
-    for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
+    for (i = 0; i < slidesMobile.length; i++) {
+        slidesMobile[i].style.display = "none";
     }
-    for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" active", "");
+    for (i = 0; i < dotsMobile.length; i++) {
+        dotsMobile[i].className = dotsMobile[i].className.replace(" activemobile", "");
     }
-    slides[slideIndex - 1].style.display = "block";
-    dots[slideIndex - 1].className += " active";
+    slidesMobile[slideIndexMobile - 1].style.display = "block";
+    dotsMobile[slideIndexMobile - 1].className += " activemobile";
 }
+
 
 /* calculator */
 
@@ -78,7 +79,7 @@ function calc() {
         alert("Вы не указали описание!");
     } else {
         {
-            let pricePerCm = 50;
+            let pricePerCm = 15;
             let size = (height) * Math.pow(width, 2);
             document.getElementById('size').innerHTML = "Объем: " + size + " см в кубе";
             let price = size * pricePerCm;
